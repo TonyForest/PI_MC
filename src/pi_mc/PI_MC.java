@@ -15,19 +15,26 @@ public class PI_MC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        int firstArg=0;
            //System.out.println(args.length); 
            if(args.length<1)
            {
                System.out.println("Using RNG defaults to determine PI");
+               firstArg=2;
            }
            else //parse command line
            {
                
+             try {
+            firstArg = Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                System.err.println("Argument" + args[0] + " must be an integer.");
+                   System.exit(1);
+                }
            }
-          
+          for(int i=0;i<firstArg;i++){
            System.out.println(Math.random()); 
-       
+          }
     }
     
 }
