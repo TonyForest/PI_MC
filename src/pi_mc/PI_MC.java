@@ -38,7 +38,7 @@ public class PI_MC {
               
               x=Math.random();
               y=Math.random();
-               dist=x*x+y*y;
+              dist=x*x+y*y;
                
               if(dist>0)
                 {
