@@ -16,11 +16,12 @@ public class PI_MC {
      */
     public static void main(String[] args) {
         int firstArg=0;
+        double x=0,y=0,dist=0,NumCirHits=0,NumSqHits=0;
            //System.out.println(args.length); 
            if(args.length<1)
            {
                System.out.println("Using RNG defaults to determine PI");
-               firstArg=2;
+               firstArg=100000;
            }
            else //parse command line
            {
@@ -32,9 +33,30 @@ public class PI_MC {
                    System.exit(1);
                 }
            }
-          for(int i=0;i<firstArg;i++){
-           System.out.println(Math.random()); 
-          }
+          for(int i=0;i<firstArg;i++)
+          {
+              
+              x=Math.random();
+              y=Math.random();
+               dist=x*x+y*y;
+               
+              if(dist>0)
+                {
+                        dist=Math.sqrt(dist);
+                        
+                            if(dist<=1.0)
+                            {
+                            NumCirHits+=1.0;
+                            }
+                        NumSqHits+=1.0;
+                       
+
+                }
+
+              }
+           if(NumSqHits>0)
+                System.out.println(4*NumCirHits/NumSqHits); 
+    
     }
     
 }
