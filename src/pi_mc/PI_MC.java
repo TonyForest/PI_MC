@@ -15,7 +15,9 @@ public class PI_MC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       System.out.println(Math.random()); // Display the string.
+        
+           System.out.println(args.length); 
+           System.out.println(Math.random()); 
        
     }
     
