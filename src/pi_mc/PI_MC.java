@@ -16,7 +16,16 @@ public class PI_MC {
      */
     public static void main(String[] args) {
         
-           System.out.println(args.length); 
+           //System.out.println(args.length); 
+           if(args.length<1)
+           {
+               System.out.println("Using RNG defaults to determine PI");
+           }
+           else //parse command line
+           {
+               
+           }
+          
            System.out.println(Math.random()); 
        
     }
